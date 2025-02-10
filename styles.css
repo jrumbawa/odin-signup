@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "Nurse Bold";
+  src: url("/assets/Norse-Bold.otf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+body {
+  display: flex;
+  margin: 0;
+}
+
+.sidebar {
+  position: relative;
+  background-image: url("assets/leaf-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  flex-basis: 40vw;
+}
+
+.sidebar-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 100px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.sidebar-logo img {
+  width: 80px;
+  height: auto;
+}
+
+.sidebar-logo p {
+  font-family: "Nurse Bold";
+  font-size: 75px;
+  line-height: 0;
+}
+
+.content {
+  flex-basis: 60vw;
+}
