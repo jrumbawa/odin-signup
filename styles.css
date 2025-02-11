@@ -3,8 +3,16 @@
   src: url("/assets/Norse-Bold.otf");
 }
 
+:root {
+  --color-light-gray: #e5e7eb;
+  --color-gray: #f9fafb;
+  --color-dark-gray: #303844;
+  --color-green: #596d48;
+}
+
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 img {
@@ -13,6 +21,7 @@ img {
 }
 
 body {
+  font-family: Arial, Helvetica, sans-serif;
   display: flex;
   margin: 0;
 }
@@ -22,7 +31,7 @@ body {
   background-image: url("assets/leaf-bg.jpg");
   background-position: center;
   background-size: cover;
-  flex-basis: 40vw;
+  flex-basis: 30vw;
 }
 
 .sidebar-logo {
@@ -30,7 +39,7 @@ body {
   justify-content: center;
   align-items: center;
   color: white;
-  margin-top: 100px;
+  margin-top: 200px;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -46,5 +55,82 @@ body {
 }
 
 .content {
-  flex-basis: 60vw;
+  flex-basis: 70vw;
+}
+
+.wrapper {
+  max-width: 90%;
+  margin-inline: auto;
+}
+
+.content-intro {
+  background-color: var(--color-gray);
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding-block: 50px 20px;
+}
+
+.content-intro p {
+  text-wrap: balance;
+  margin-bottom: 1em;
+}
+
+.form-wrapper {
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+  padding-block: 1.375em;
+}
+
+.form-wrapper p {
+  color: var(--color-dark-gray);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.875em;
+}
+
+.content-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 500px;
+  column-gap: 4em;
+  row-gap: 1em;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper label {
+  font-size: 0.625rem;
+  font-weight: 600;
+  color: var(--color-dark-gray);
+  text-transform: uppercase;
+  letter-spacing: 1;
+  margin-bottom: 0.5em;
+}
+
+.input-wrapper input {
+  border: 1px solid var(--color-light-gray);
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+.input-wrapper input:focus {
+  border: 2px solid dodgerblue;
+  outline: none;
+  box-shadow: 0px 2px 2px var(--color-dark-gray);
+}
+
+.content-outro {
+  padding-top: 2em;
+}
+.content-outro .btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--color-green);
+  color: var(--color-gray);
+  font-size: 0.875rem;
+  padding: 0.75em 1.875em;
+  border-radius: 8px;
+  margin-bottom: 2em;
 }
